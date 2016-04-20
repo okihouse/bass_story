@@ -1,0 +1,12 @@
+.classpath
+.project
+.settings
+.metadata
+.factorypath
+.springBeans
+bin
+build
+lib/
+target
+.idea*
+.DS_Store
