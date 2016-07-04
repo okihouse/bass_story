@@ -1,0 +1,25 @@
+server:
+  context-path: /api
+
+spring: 
+  jpa:
+    database: h2
+    hibernate:
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      #ddl-auto: create
+    properties:
+      hibernate.format_sql: true
+      
+slack:
+  notification:
+    url: ENC(8HApecKcGTvROuTEi7vdhyd5MtX0C+BEu6W2Qe+wLX+H2gekRwUjIWCAMnEEYTgmkVZoHLcaInnlj37n6vmcq/7ZTEqnPkoApBoPV9gfl9G2xoT0p3VQlw==)
+
+---    
+spring:
+  profiles: local
+
+  jpa:
+    show-sql: true
+---
+spring:
+  profiles: prd
