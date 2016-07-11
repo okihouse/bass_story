@@ -18,6 +18,9 @@ public class BassInfoService {
 	
 	public BassVersionVO version() {
 		Information infomation = bassInfomationRepository.findFirstByOrderByIssueDateDesc();
+		if (infomation == null) {
+			infomation = new Information();
+		}
 		return new BassVersionVO(infomation.getVersion(), infomation.getIssueDate());
 	}
 
