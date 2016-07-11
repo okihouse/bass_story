@@ -26,16 +26,6 @@ public class BassContentService {
 		
 		Page<Content> pages = bassContentRepository.findAll(pageRequest);
 		
-//		int size = pages.getContent().size();
-//		if (page == 1 && size > 3) {
-//			List<Content> carousel = pages.getContent().subList(0, 3);
-//			List<Content> contents = pages.getContent().subList(3, size);
-//			bassContentVO.setCarousel(carousel);
-//			bassContentVO.setContents(contents);
-//		} else {
-//			bassContentVO.setContents(pages.getContent());
-//		}
-		
 		BassContentVO bassContentVO = new BassContentVO();
 		bassContentVO.setContents(pages.getContent());
 		bassContentVO.setLast(pages.isLast());
