@@ -9,5 +9,4 @@ build
 lib/
 target
 /.apt_generated/
-BassApplication.java
 *.iml
